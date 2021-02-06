@@ -24,7 +24,7 @@ SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 
 # Balenalib images for arm can be cross-built on x86.
 # Comment out next line for native build.
-RUN [ "cross-build-start" ]
+# RUN [ "cross-build-start" ]
 
 # Define RStudio source code version to use and the package release tag.
 ARG DEBIAN_VERSION
@@ -125,7 +125,7 @@ RUN set -x \
 # The product of this build is: rstudio-server-${BUILD_TAG}_armhf.deb
 
 # Comment out next line for native build.
-RUN [ "cross-build-end" ]
+# RUN [ "cross-build-end" ]
 
 # Extract only the finished Debian package and leave it in an empty docker
 # image to reduce image size. If you want to capture the package in its

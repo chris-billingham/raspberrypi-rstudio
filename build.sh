@@ -75,17 +75,17 @@ EOF
       readonly PACKAGE_RELEASE="4~r2r.${DEBIAN_VERSION}"
       ;;
     'buster')
-      # As of 2020-04-01 v1.2.5042 is the latest version 1.2 tag.
+      # As of 2021-02-06 v1.4.1103 is the latest version 1.4 tag.
       readonly VERSION_MAJOR=1
-      readonly VERSION_MINOR=2
-      readonly VERSION_PATCH=5042
+      readonly VERSION_MINOR=4
+      readonly VERSION_PATCH=1103
       readonly PACKAGE_RELEASE="1~r2r.${DEBIAN_VERSION}"
       ;;
     'bullseye')
-      # As of 2020-04-01 v1.2.5042 is the latest version 1.2 tag.
+      # As of 2021-02-06 v1.4.1103 is the latest version 1.4 tag.
       readonly VERSION_MAJOR=1
-      readonly VERSION_MINOR=2
-      readonly VERSION_PATCH=5042
+      readonly VERSION_MINOR=4
+      readonly VERSION_PATCH=1103
       readonly PACKAGE_RELEASE="1~r2r.${DEBIAN_VERSION}"
       ;;
     *)

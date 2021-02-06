@@ -47,7 +47,7 @@ SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 
 # Balenalib images for arm can be cross-built on x86.
 # Comment out next line for native build.
-RUN [ "cross-build-start" ]
+# # RUN [ "cross-build-start" ]
 
 # Define Debian version, RStudio version to use and the package release tag.
 ARG DEBIAN_VERSION
@@ -114,7 +114,7 @@ RUN set -x \
 CMD ["/bin/run-rstudio-server"]
 
 # Comment out next line for native build.
-RUN [ "cross-build-end" ]
+# # RUN [ "cross-build-end" ]
 
 #===== Build stage: install-full. =====
 
@@ -126,7 +126,7 @@ ARG DEBIAN_VERSION
 ARG BUILD_PARALLELISM=1
 
 # Comment out next line for native build.
-RUN [ "cross-build-start" ]
+# RUN [ "cross-build-start" ]
 
 # Add additional packages to make R/RStudio more useful:
 #   * for R packages installed from source (build-essential etc.)
@@ -308,7 +308,7 @@ RUN set -x \
     && rm -rf /var/lib/apt/lists/*
 
 # Comment out next line for native build.
-RUN [ "cross-build-end" ]
+# RUN [ "cross-build-end" ]
 
 # Label the image. Override those ARGs on the command line:
 # docker build ... \
